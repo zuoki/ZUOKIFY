@@ -16,7 +16,7 @@ export const playlists: Playlist[] = [
     title: "Chill Lo-Fi Music",
     color: colors.yellow,
     cover:
-      "https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353",
+      "https://media.istockphoto.com/id/1716468445/es/foto/siente-la-m%C3%BAsica.jpg?s=2048x2048&w=is&k=20&c=spEt8RQmvM1npH3DUZEPm6h73A1Yms1xtec3cyG2rWw=",
     artists: ["NoSpirit", "Casiio"],
   },
   {
@@ -25,7 +25,7 @@ export const playlists: Playlist[] = [
     title: "Lo-Fi Chill Session",
     color: colors.green,
     cover:
-      "https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187",
+      "https://media.istockphoto.com/id/1402801804/es/foto/vista-de-la-naturaleza-de-cerca-de-las-palmeras-y-el-fondo-de-la-monstera-y-la-hoja-de-helecho.jpg?s=2048x2048&w=is&k=20&c=UF9fG1gGYniD6Ysu3sG0OhJazd68rxyB5EsebEEhffg=",
     artists: ["Kupla", "Blue Fox"],
   },
   {
@@ -52,7 +52,7 @@ export const playlists: Playlist[] = [
     title: "Chau Saura Session",
     color: colors.purple,
     cover:
-      "https://f4.bcbits.com/img/a2793859494_16.jpg",
+      "https://res.cloudinary.com/da72ceh1z/image/upload/v1728188059/xoga1e3kkg0vbx0aixch.png",
     artists: ["Chau Saura", "amies", "kyu"],
   },
   {

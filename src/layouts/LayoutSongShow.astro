@@ -23,17 +23,19 @@ const { title } = Astro.props;
 	</head>
 	<body> 
 		<div id="app" class="relative h-screen  p-2 gap-2 ">
-			<header class="[grid-area:header] bg-slate-100 h-8">
-	dasd</header>
-			<aside class="[grid-area:aside] flex-col flex overflow-y-auto ">
-				<AsideMenu></AsideMenu>
-			</aside>
-			<main class="[grid-area:main] rounded-lg  overflow-y-auto">
-				
+        <aside class="[grid-area:aside] flex-col flex overflow-y-auto -">
+			<AsideMenu></AsideMenu>
+		</aside>
+		<main class="[grid-area:main] rounded-lg  overflow-y-auto">
+			
 			<slot />
         
 		</main>
-		<footer class="[grid-area:player] min-h-[60px]  ">
+		<aside class="[grid-area:verticalPlayer] bg-slate-100">
+			dasdas
+			<slot name="player"/>
+		</aside>
+		<footer class="[grid-area:player] min-h-[100px] ">
 			PLAYER
 		</footer>
 		</div>
@@ -43,52 +45,13 @@ const { title } = Astro.props;
 	#app{
 		display: grid;
 		grid-template-areas:
-		" header header header"
-		"aside main main  "
-		"player player player";
-		grid-template-columns: 350px   1fr 1fr ;
-		grid-template-rows:auto 1fr auto ;
+		"aside main main  verticalPlayer "
+		"player player player player";
+		grid-template-columns: 350px  1fr 1fr 1fr  ;
+		grid-template-rows: 1fr auto;
 	}
 </style>
 <style is:global>
-/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-/** {
-  scrollbar-width: thin;
-  scrollbar-color: #397524 #DFE9EB;
-}*/
-
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  height: 10px;
-  width: 10px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: transparent;
-}
-
-*::-webkit-scrollbar-track:hover {
-  background-color: #B8C0C2;
-}
-
-*::-webkit-scrollbar-track:active {
-  background-color: #B8C0C2;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #323432;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #62A34B;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: #62A34B;
-}
-
-
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -144,6 +107,4 @@ const { title } = Astro.props;
         font-style: normal;
         font-display: swap;
       }
-
-	  
 </style>

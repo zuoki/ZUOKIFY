@@ -2,21 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 import  {playlists}  from '../lib/data';
 import PlaylistItemCard from '../components/PlaylistItemCard.astro';
+import PlaylistItemCardQube from '../components/PlaylistItemCardQube.astro';
+
+const artistPopularShow= playlists.slice(0,6)
 ---
 
 <Layout title=" <Zuokify/>">
 	<div id="playlist-container w-full h-full"
-	class="relative transition-all duration-1000 bg-gradient-to-t from-zinc-900 to-amber-700/40 bg-zinc-700/80"
+	class="relative transition-all duration-1000 bg-gradient-to-t from-zinc-900 to-green-700/40 bg-zinc-700/80"
 	>
 	<!--PageHeader -->
 	
 	<div class="relative z-10 px-6">
-		<!---Greatings --->
-		<h1 class="text-2xl text-white font-bold">Que escuchamos?</h1>
-		<div class="flex flex-wrap mt-6 gap-5 pb-8">
-			{playlists.map((elemento=><PlaylistItemCard elemento={elemento}/>))}
+		<!---Artistas Populares --->
+		<h1 class="text-2xl text-white font-bold pt-4 ">Artistas Populares</h1>
+		<section class="flex flex-wrap mt-6 gap-5 pb-8 justify-center w-f">
+			{artistPopularShow.map((elemento=><PlaylistItemCard elemento={elemento}/>))}
+		</section>
+      	<!---Albums Populares --->
+		<h1 class="text-2xl text-white font-bold pt-4">Artistas Populares</h1>
+		<section class="flex flex-wrap mt-6 gap-5 pb-8 justify-center">
+			{artistPopularShow.map((elemento=><PlaylistItemCardQube elemento={elemento}/>))}
+		</section>
 
-		</div>
+		<!---Albums Populares --->
+		<h1 class="text-2xl text-white font-bold pt-4">Hits del momento</h1>
+		<section class="flex flex-wrap mt-6 gap-5 pb-8 justify-center">
+			{artistPopularShow.map((elemento=><PlaylistItemCardQube elemento={elemento}/>))}
+		</section>
 	</div>
 
 	<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/80">

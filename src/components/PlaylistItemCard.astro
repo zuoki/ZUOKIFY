@@ -12,27 +12,26 @@ const {
     color
 }=elemento
 
-const artistString = artists.join(", ")
 ---
 
-<a href={`/playlist/${id}`} 
+<a href={`/Songs/${id}`} 
 class="playlist-item flex transition-all duraciton-300 relative p-2 overflow-hidden items-center gap-5 text-gray-300 rounded-md
- hover:bg-zinc-700 hover:text-gray-100 shadow-lg hover:shadow-xl w-52 flex-col  hover:scale-[118%] ">
-<picture class="aspect-square w-full h-auto flex-none"  >
+hover:bg-zinc-700 hover:text-gray-50  hover:shadow-xl 2xl:w-52 xl:w-32 flex-col  hover:scale-[118%]  ">
+<picture class="aspect-square w-full h-auto flex-none  z-20"  >
     <img 
     src={cover} 
-    alt=`cover of ${title} by ${artistString}`
-     class="object-cover w-full h-full rounded-md">
-
+    alt=`cover of ${title}`
+    class="object-cover w-full h-full rounded-full z-20"
+    transition:name=`playlist ${id} image`>
+    
 </picture>
 
-<div class="flex flex-auto  flex-col truncate  text-sm ">
+<div class="flex flex-auto  flex-col truncate  text-sm px-2 z-20 ">
     <h4 class="font-bold">
         {title}
     </h4>
-    <span class="text-xs -px-2">
-        {artistString}
-    </span>
+    
 </div>
+
 
 </a>

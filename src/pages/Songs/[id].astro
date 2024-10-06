@@ -1,0 +1,32 @@
+---
+import type { Playlist } from "../../lib/data";
+import  { allPlaylists,songs } from "../../lib/data";
+import Layout from '../../layouts/Layout.astro';
+import PlaylistItemCard from '../../components/PlaylistItemCard.astro';
+
+const {id} = Astro.params
+const playlist= allPlaylists.find(playlist=>playlist.id===id)
+const playlistSongs= songs.filter(song => song.albumId===playlist?.albumId)
+---
+
+<Layout title=" <Zuokify/>">
+	<div id="playlist-container w-full h-full"
+	class="relative transition-all duration-1000 bg-gradient-to-t from-zinc-900 to-amber-700/40 bg-zinc-700/80"
+	>
+	<!--PageHeader -->
+	
+	<div class="relative z-10 px-6">
+		<!---Greatings --->
+		<h1 class="text-2xl text-white font-bold pt-4">Que escuchamos?</h1>
+		<div class="flex flex-wrap mt-6 gap-5 pb-8">
+			
+
+		</div>
+	</div>
+
+	<div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/80">
+
+	</div>
+    
+	</div>
+</Layout>
